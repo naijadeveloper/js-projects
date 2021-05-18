@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: calibri;
+}
+
+:root {
+  --primary: #444;
+  --seconday: #ddd;
+}
+
+body {
+  background-color: var(--primary);
+}
