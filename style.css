@@ -8,9 +8,119 @@
 
 :root {
   --primary: #444;
-  --seconday: #ddd;
+  --secondary: #ddd;
 }
 
 body {
   background-color: var(--primary);
+}
+
+
+#container {
+  background-color: var(--secondary);
+  height: 100vh;
+  width: 600px;
+  margin: 0 auto;
+  overflow: auto;
+
+  display: flex;
+  flex-flow: column;
+}
+
+  header.header-contents {
+    display: flex;
+    justify-content: space-around;
+  }
+
+    section.title-of-app h1 {
+      margin-top: 15px;
+      font-size: 40px;
+      letter-spacing: 5px;
+      text-decoration: underline;
+      color: crimson;
+    }
+
+  main.sections {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 2;
+  }
+
+    section.time-selection {
+      display: flex;
+      justify-content: space-around;
+      width:100%;
+      padding: 25px;
+    }
+
+      label {
+        text-align: center;
+      }
+
+        label span{
+          display: block;
+          margin-bottom: 5px;
+        }
+
+    section.get-buttons {
+      text-align: center;
+      padding: 25px;
+    }
+
+      .btn {
+        appearance: none;
+        border: 1px solid #555;
+        margin:15px 10px 0px 10px;
+        padding: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: #ccc;
+      }
+   
+    section.show-time {
+      padding: 25px;
+      padding-bottom: 40px;
+      width:100%;
+      text-align: center;
+      font-size: 30px;
+    }
+
+      section.show-time span {
+        font-size: 40px;
+        font-weight: bolder;
+        color: var(--primary);
+      }
+
+      section.show-time span.error {
+        color: crimson;
+      }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+  footer span {
+    background-color: var(--secondary);
+  }
+
+
+@media screen and (max-width: 600px) {
+  div#container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section.title-of-app h1 {
+    font-size: 35px;
+    letter-spacing: 0px;
+  }
 }
